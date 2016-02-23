@@ -15,9 +15,10 @@ setup = function () {
 
 draw = function () {
   background(0);
-
-  bubbles.forEach(function updateAndDisplay(bubble) {
-    bubble.update();
-    bubble.display();
-  });
+  var index = 0;
+  while(index < bubbles.length) {
+    bubbles[index].update();
+    bubbles[index].display();
+    index += 1;
+  }
 };
